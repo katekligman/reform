@@ -9,7 +9,7 @@ reform$(EXE) : Reform*.hs MD5.lhs md5_c.o
 	strip $@
 
 md5_c.o : md5_c.c md5_c.h
-	gcc -c ${CFLAGS} $<
+	gcc -m32 -c ${CFLAGS} $<
 
 clean:
 	rm -f *.o *.hi reform.exe
